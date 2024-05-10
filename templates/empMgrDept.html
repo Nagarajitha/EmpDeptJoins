@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>empMgrDept</h1>
+        <table border="2px">
+            <tr>
+                <th>Emp Name</th>
+                <th>Emp Sal</th>
+                <th>Emp Job</th>
+                <th>Emp dno</th>
+                <th>Emp HireDate</th>
+                <th>Emp COMM</th>
+                <th>Mgr Name</th>
+                <th>Mgr Sal</th>
+                <th>Mgr HireDate</th>
+                <th>Mgr Dno</th>
+                <th>Mgr Comm</th>
+                <th>Emp Dept Name</th>
+                <th>Mgr Dept Name</th>
+
+            </tr>
+            {% for emdo in EMDJD %}
+            <tr>
+                <td>{{emdo.ENAME}}</td>
+                <td>{{emdo.SAL}}</td>
+                <td>{{emdo.JOB}}</td>
+                <td>{{emdo.DEPTNO}}</td>
+                <td>{{emdo.HIREDATE}}</td>
+                <td>{{emdo.COMM}}</td>
+                <td>{{emdo.MGR.ENAME}}</td>
+                <td>{{emdo.MGR.SAL}}</td>
+                <td>{{emdo.MGR.HIREDATE}}</td>
+                <td>{{emdo.MGR.DEPTNO}}</td>
+                <td>{{emdo.MGR.COMM}}</td>
+                <td>{{emdo.DEPTNO.DNAME}}</td>
+                <td>{{emdo.MGR.DEPTNO.DNAME}}</td>
+
+            </tr>
+
+            {% endfor %}
+        </table>
+    </center>
+    
+</body>
+</html>

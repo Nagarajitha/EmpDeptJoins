@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Display Updated Data</h1>
+
+        <table border="2px">
+            <tr>
+                <th>Empno</th>
+                <th>Ename</th>
+                <th>Job</th>
+                <th>Hiredate</th>
+                <th>Mgr</th>
+                <th>Sal</th>
+                <th>Comm</th>
+                <th>Deptno</th>
+            </tr>
+        {% for eo in EUP %}
+
+        <tr>
+            <td>{{eo.EMPNO}}</td>
+            <td>{{eo.ENAME}}</td>
+            <td>{{eo.JOB}}</td>
+            <td>{{eo.HIREDATE}}</td>
+            <td>{{eo.MGR}}</td>
+            <td>{{eo.SAL}}</td>
+            <td>{{eo.COMM}}</td>
+            <td>{{eo.DEPTNO}}</td>
+        </tr>
+
+        {% endfor %}
+
+        </table>
+    </center>
+</body>
+</html>

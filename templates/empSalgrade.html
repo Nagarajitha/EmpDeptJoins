@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>empSalgrade</h1>
+        <table border="2px">
+            <tr>
+                <th>ENAME</th>
+                <th>SAL</th>
+                <th>LOSAL</th>
+                <th>HISAL</th>
+                <th>GRADE</th>
+            </tr>
+
+        {% for eso in EMSJD %}
+        <tr>
+            <td>{{eso.ENAME}}</td>
+            <td>{{eso.SAL}}</td>
+            <td>{{eso.LOSAL}}</td>
+            <td>{{eso.SAL.HISAL}}</td>
+            <td>{{eso.GRADE}}</td>
+        </tr>
+
+        {% endfor %}
+        </table>
+    </center>
+</body>
+</html>
